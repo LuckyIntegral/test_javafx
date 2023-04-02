@@ -11,6 +11,7 @@ module com.example.testfx {
     exports com.example.testfx.controller;
     exports com.example.testfx.persistance.entity;
     exports com.example.testfx.persistance.dto;
+    exports com.example.testfx.persistance.type;
 
     opens com.example.testfx.controller to javafx.fxml;
 }
