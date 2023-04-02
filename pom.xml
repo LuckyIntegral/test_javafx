@@ -16,7 +16,6 @@
         <javafx.version>17.0.2</javafx.version>
         <reactivex.version>2.2.21</reactivex.version>
         <rxjava2.extension.version>0.20.10</rxjava2.extension.version>
-        <mysql.connector.version>8.0.32</mysql.connector.version>
         <maven.plugin.compiler.version>3.11.0</maven.plugin.compiler.version>
         <maven.plugin.javafx.version>0.0.8</maven.plugin.javafx.version>
     </properties>
@@ -49,7 +48,7 @@
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
-            <version>${mysql.connector.version}</version>
+            <version>8.0.32</version>
         </dependency>
 
         <!--junit-->
