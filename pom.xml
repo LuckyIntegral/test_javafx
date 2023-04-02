@@ -11,8 +11,14 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>17</java.version>
         <junit.version>5.9.2</junit.version>
         <javafx.version>17.0.2</javafx.version>
+        <reactivex.version>2.2.21</reactivex.version>
+        <rxjava2.extension.version>0.20.10</rxjava2.extension.version>
+        <mysql.connector.version>8.0.32</mysql.connector.version>
+        <maven.plugin.compiler.version>3.11.0</maven.plugin.compiler.version>
+        <maven.plugin.javafx.version>0.0.8</maven.plugin.javafx.version>
     </properties>
 
     <dependencies>
@@ -32,18 +38,18 @@
         <dependency>
             <groupId>io.reactivex.rxjava2</groupId>
             <artifactId>rxjava</artifactId>
-            <version>2.2.21</version>
+            <version>${reactivex.version}</version>
         </dependency>
         <dependency>
             <groupId>com.github.akarnokd</groupId>
             <artifactId>rxjava2-extensions</artifactId>
-            <version>0.20.10</version>
+            <version>${rxjava2.extension.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
-            <version>8.0.32</version>
+            <version>${mysql.connector.version}</version>
         </dependency>
 
         <!--junit-->
@@ -66,16 +72,16 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.1</version>
+                <version>${maven.plugin.compiler.version}</version>
                 <configuration>
-                    <source>17</source>
-                    <target>17</target>
+                    <source>${javafx.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.8</version>
+                <version>${maven.plugin.javafx.version}</version>
                 <executions>
                     <execution>
                         <!-- Default configuration for running with: mvn clean javafx:run -->
