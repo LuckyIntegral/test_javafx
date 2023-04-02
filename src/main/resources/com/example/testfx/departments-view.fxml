@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.testfx.controller.DepartmentController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <VBox layoutX="26.0" layoutY="22.0" spacing="20.0">
+        <Label text="ID">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label text="Type">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+    </VBox>
+    <VBox layoutX="88.0" layoutY="22.0" prefHeight="130.0" prefWidth="129.0" spacing="10.0">
+        <TextField fx:id="depIdText"/>
+        <TextField fx:id="depTypeText"/>
+    </VBox>
+    <HBox layoutX="26.0" layoutY="202.0" spacing="10.0">
+        <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertButton" text="Insert"/>
+        <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButton" text="Update"/>
+        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButton" text="Delete"/>
+    </HBox>
+    <TableView fx:id="departmentTable" layoutX="238.0" layoutY="22.0" prefHeight="210.0" prefWidth="295.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="35.0" text="ID"/>
+            <TableColumn fx:id="typeColumn" prefWidth="120.0" text="Department type"/>
+            <TableColumn fx:id="employeeNumberColumn" prefWidth="120.0" text="Employee count"/>
+        </columns>
+    </TableView>
+</AnchorPane>
